@@ -266,10 +266,9 @@
 	                  })
 	
 	    $('.label').css('left',($('.chart').position().left)+(margin.left)+"px")
-	
-	            $('.label').css('padding-top',(margin.top))
-	            $($('.label')[0]).css('padding-top','0')
-	
+	    $('.label').css('padding-top',(margin.top))
+	    $($('.label')[0]).css('padding-top','0')
+	    $($('.label')[0]).css('top','0')
 	    function changeYear(year){
 	            nestarray = d3.nest().key(function(d){
 	                        return getBucket(d['val'])
@@ -297,34 +296,35 @@
 	
 	            var gap = 1
 	            
-	            $($('.label')[0]).css('top','0')
+	            var gaplist = []
 	            
-	
+	            sorted_nestarray.forEach(function(group,index){
+	               
+	            })
 	            sorted_nestarray.forEach(function(group,index){
 	                $('.label[data-which="'+group.key+'"] span').text(group.values.length)
 	
-	                    if (index!=0){
+	                     if (index!=0){
 	                        var len = (sorted_nestarray[index-1].values.length)/column_numbers
 	                        gap = gap + Math.floor(len)
-	
+	                         
+	                    } else {
+	                       gap = 1
 	                    }
-	                    // some temp handling for bad math
 	                    if (len && (sorted_nestarray[index-1].values.length)%column_numbers==0){
-	                        gap = gap - 1
-	                    }
-	                    
+	                            gap = gap - 1
+	                        }
+	                    // some temp handling for bad math
 	                  group.values.forEach(function(d, i){
 	                    d.x = ((i % column_numbers)*options.rectWidth)
 	                    var line_num = Math.floor(i/column_numbers)
 	                    d.y = ((options.rectHeight) * ((gap)+(isFinite(line_num)?line_num:0)))+(index*4*options.rectHeight)
 	                    d.type = group.key
-	            if (group.values.length == i+1){
-	                $($('.label')[index+1]).css('top',(
-	                    options.rectHeight * ((index*5)+gap+
-	                                        (isFinite(line_num)?line_num:0))
-	                    )+'px')
-	                
-	            }
+	                    if (group.values.length == i+1){
+	                        $($('.label')[index+1]).css('top',
+	                           ((options.rectHeight) * ((gap)+(isFinite(line_num)?line_num:0)))+(index*4*options.rectHeight)+(options.rectHeight*2.5)
+	                            +'px')
+	                    }
 	
 	                  })
 	            })

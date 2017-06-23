@@ -4,7 +4,7 @@ var d3 = require('d3')
 var $ = jQuery = require('jquery')
 var _ = require('underscore')
 
-var shortlist = ["All courses","B.A. (P)","B.Com.(H)","B.Com.(P)","Bio-Chem","Botany","Chemistry","Computer Science","Economics","Electronics","English","Food Tech","Geography","Hindi","History","Mathematics","Micro","Micro Biology","Philosophy","Phy. Science","Physics","Political Science","Psychology","Sociology","Statistics","Zoology"]
+var shortlist = ["B.A. (P)","B.Com. (Hons.)","B.Com. (Pass)","Biochemistry","Botany","Chemistry","Computer Science","Economics","Electronics","Food Technology","Geography","Hindi","History","Mathematics","Micro","Microbiology","Philosophy","Physical Science","Physics","Political Science","Psychology","Sociology","Statistics","Zoology","Sanskrit","Urdu"]
 
 var container_width = $(window).width()
 var container_height = $(window).height(); 
@@ -14,7 +14,7 @@ var options = {
       rectWidth: (container_width<800)?13:(18),
       rectHeight: (container_width<800)?13:(18),
     };
-
+var endyear = 2017
 var column_numbers = (container_width<800)?(Math.floor((container_width-margin.left-margin.right)/options.rectWidth)):40
 
 var streamColors = {
@@ -48,8 +48,8 @@ var course_mapping = {
 "B.A. Voc.- HRM":"Vocational",
 "B.A. with Bengali":"Arts",
 "B.A.(P)":"Arts",
-"B.Com.(H)":"Commerce",
-"B.Com.(P)":"Commerce",
+"B.Com. (Hons)":"Commerce",
+"B.Com. (Pass)":"Commerce",
 "B.Sc. App. Life Sc.(APC)":"Science",
 "B.Sc. App. Life Science":"Science",
 "B.Sc. App. Phy. Sci. (Anal.Chem. & Bio-Chem.)":"Science",
@@ -122,44 +122,79 @@ var course_mapping = {
 
 optionlist =  ["<70","70-80","80-90",">90","Unknown"]
 
-d3.csv('data/data.csv',function(error,data){
+d3.csv('data/formatted_all_2017.csv',function(error,data){
 
     var filtered_data = _.chain(data).filter(function(d){
-        return (_.contains(shortlist, d.course))
+        return (_.contains(shortlist, d.course))&& d.college!="Jesus & Mary"
     }).sortBy(function(d){return course_mapping[d.course]}).value()
     shortlist.forEach(function(d){
         $('#course').append("<option value = '"+d+"'>"+d+"</option>")
     })
-
+    $('#college').append("<option value = 'all'>All Colleges</option>")
     _.chain(filtered_data).pluck('college').uniq().value().sort().forEach(function(d){
         $('#college').append("<option value = '"+d+"'>"+d+"</option>")
     })
     
     $('#course').change(function(){
+
         var course_val = $(this).val()
-        console.log(course_val)
+        var college_val = $('#college').val()
+
+        
         d3.selectAll('.course')
             .transition()
             .style('fill',function(d){
-                if (d.course == course_val){
-                    return "magenta"
+                if (college_val=='all'){
+                    if (d.course == course_val){
+                        return "magenta"
+                    } else {
+                        return "#3a3a3a"
+                    }
                 } else {
-                    return "#3a3a3a"
+                    if (d.course == course_val&&d.college == college_val){
+                        return "magenta"
+                    } else {
+                        return "#3a3a3a"
+                    }
                 }
             })
+            if (college_val=='all'){
+                var filtered_colleges = _.chain(filtered_data).where({'course':course_val}).pluck('college').uniq().value()
+                $('#college').html('<option value="all">All colleges</option>')
+                filtered_colleges.forEach(function(d){
+                    $('#college').append('<option value="'+d+'">'+d+'</option>')
+                })
+            }
     })
 
     $('#college').change(function(){
         var college_val = $(this).val()
+        var course_val = $('#course').val()
         d3.selectAll('.course')
             .transition()
             .style('fill',function(d){
-                if (d.college == college_val){
-                    return "magenta"
+                if (course_val=='all'){
+                    if (d.college == college_val){
+                        return "magenta"
+                    } else {
+                        return "#3a3a3a"
+                    }
                 } else {
-                    return "#3a3a3a"
+                    if (d.college == college_val&&d.course == course_val){
+                        return "magenta"
+                    } else {
+                        return "#3a3a3a"
+                    }
                 }
             })
+
+        if (course_val=='all'){
+                var filtered_courses = _.chain(filtered_data).where({'college':college_val}).pluck('course').uniq().value()
+                $('#course').html('<option value="all">All courses</option>')
+                filtered_courses.forEach(function(d){
+                    $('#course').append('<option value="'+d+'">'+d+'</option>')
+                })
+            }
     })
 
     var nestarray,flattened, sorted_nestarray
@@ -171,7 +206,7 @@ d3.csv('data/data.csv',function(error,data){
     }, 4000);
 
     function myTimer() {
-        if (year_counter==2016){
+        if (year_counter==endyear){
            year_counter = 2008 
         } else {
             year_counter=year_counter+1
@@ -204,12 +239,8 @@ d3.csv('data/data.csv',function(error,data){
                   .style('stroke', '#fff')
                   .style('stroke-width','2')
                   .style('fill', function(d){
-                        // var thing = streamColors[course_mapping[d.course]]
-                        // if (thing){
-                        //     return (thing)
-                        // } else {
-                        //     return "#ccc"
-                        // }
+                        var obj = _.findWhere(flattened,{college: d.college, course: d.course})   
+                        return groupColors[getBucket(obj.val)]
                     })
                   .attr('transform', function(e,i){
                     var obj = _.findWhere(flattened,{college: e.college, course: e.course})
@@ -250,12 +281,14 @@ d3.csv('data/data.csv',function(error,data){
 
             var gap = 1
             
-            var gaplist = []
-            
+
             sorted_nestarray.forEach(function(group,index){
-               
-            })
-            sorted_nestarray.forEach(function(group,index){
+                if (group.key=="Unknown"){
+                    group.values.forEach(function(d){
+                        // if (d.course!="B.A. (P)"&&!d.course.match("Com."))
+                        console.log(d.course+"   |||  "+d.college)
+                    })
+                }
                 $('.label[data-which="'+group.key+'"] span').text(group.values.length)
 
                      if (index!=0){
@@ -276,7 +309,7 @@ d3.csv('data/data.csv',function(error,data){
                     d.type = group.key
                     if (group.values.length == i+1){
                         $($('.label')[index+1]).css('top',
-                           ((options.rectHeight) * ((gap)+(isFinite(line_num)?line_num:0)))+(index*4*options.rectHeight)+(options.rectHeight*2.5)
+                           ((options.rectHeight) * ((gap)+(isFinite(line_num)?line_num:0)))+(index*4*options.rectHeight)+(options.rectHeight*2.2)
                             +'px')
                     }
 
@@ -292,9 +325,34 @@ d3.csv('data/data.csv',function(error,data){
                     return 'translate('+obj.x+','+obj.y+ ')'
                 })
                 .style('fill',function(d){
-                    var obj = _.findWhere(flattened,{college: d.college, course: d.course})
+                    var college_val = $('#college').val()
+                    var course_val = $('#course').val()
 
-                    return groupColors[getBucket(obj.val)]
+                    if (college_val=="all" && course_val=="all"){
+                        var obj = _.findWhere(flattened,{college: d.college, course: d.course})   
+                        return groupColors[getBucket(obj.val)]
+                    } else {
+                        if (college_val!='all' && course_val=='all'){
+                            if (d.college == college_val){
+                                return "magenta"
+                            } else {
+                                return "#3a3a3a"
+                            }
+                        } else if (course_val!='all' && college_val=='all'){
+                            if (d.course == course_val){
+                                return "magenta"
+                            } else {
+                                return "#3a3a3a"
+                            }
+                        } else {
+                            if (d.course == course_val && d.college == college_val){
+                                return "magenta"
+                            } else {
+                                return "#3a3a3a"
+                            }
+                        }
+                        
+                    }
                 })
     }
 

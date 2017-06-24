@@ -55,11 +55,19 @@
 	var container_width = $(window).width()
 	var window_height = $(window).height(); 
 	var container_height = (window_height<500?window_height*1.2:((window_height>550)?550:window_height))
-	var margin = {top: 20, bottom: 40, left: 20, right: 20}
-	
+	var margin = {top: 20, bottom: 40, left: 10, right: 10}
+	function getRect(w){
+	    if (w>800){
+	        return 16
+	    } else if (w>600){
+	        return 13
+	    } else{
+	        return 12
+	    } 
+	}
 	var options = {
-	      rectWidth: (container_width<800)?13:(16),
-	      rectHeight: (container_width<800)?13:(16),
+	      rectWidth: getRect(container_width),
+	      rectHeight: getRect(container_width),
 	    };
 	var endyear = 2017
 	var column_numbers = (container_width<800)?(Math.floor((container_width-margin.left-margin.right)/options.rectWidth)):40
@@ -197,12 +205,18 @@
 	            .style('fill',function(d){
 	                if (college_val=='all'){
 	                    if (d.course == course_val){
+	                        if (!$('.tip').attr('style').match('none')){
+	                            tipOn(d)
+	                        }
 	                        return "#C3FF00"
 	                    } else {
 	                        return "#3a3a3a"
 	                    }
 	                } else {
 	                    if (d.course == course_val&&d.college == college_val){
+	                        if (!$('.tip').attr('style').match('none')){
+	                            tipOn(d)
+	                        }
 	                        return "#C3FF00"
 	                    } else {
 	                        return "#3a3a3a"
@@ -226,12 +240,18 @@
 	            .style('fill',function(d){
 	                if (course_val=='all'){
 	                    if (d.college == college_val){
+	                        if (!$('.tip').attr('style').match('none')){
+	                            tipOn(d)
+	                        }
 	                        return "#C3FF00"
 	                    } else {
 	                        return "#3a3a3a"
 	                    }
 	                } else {
 	                    if (d.college == college_val&&d.course == course_val){
+	                        if (!$('.tip').attr('style').match('none')){
+	                            tipOn(d)
+	                        }
 	                        return "#C3FF00"
 	                    } else {
 	                        return "#3a3a3a"
@@ -251,12 +271,12 @@
 	    var nestarray,flattened, sorted_nestarray
 	    var year_counter = 2008
 	    changeYear(2008)
-	
+	    var myVar
 	    function myTimer() {
 	        if (year_counter==endyear){
 	           year_counter = 2008 
 	        } else {
-	            year_counter=year_counter+1
+	            year_counter=parseInt(year_counter)+1
 	        }
 	        changeYear(year_counter)
 	    }
@@ -265,16 +285,28 @@
 	        clearInterval(myVar);
 	    }
 	
-	    $('#play').on('click',function(){
-	        var myVar = setInterval(function(){ 
-	            myTimer() 
-	        }, 4000);
+	    
+	
+	    $('#play .fa-play,.play-button-new .fa-play').on('click',function(){
+	        if (!$(body).hasAttribute('playing')){
+	            myVar = setInterval(function(){ 
+	                myTimer() 
+	            }, 4000);
+	            $(body).attr('playing','y')
+	        }
+	        $('.fa-play').removeClass('.fa-play')
+	        $('.addClass').removeClass('.fa-pause')
+	
 	        //scroll to partcular section on the page
 	        var buffer = 0
 	        var pos = $('.sentence').offset();
 	        console.log(pos)
 	        pos.top = pos.top - buffer;
 	        $('html, body').animate({scrollTop:(pos.top)}, 1200);
+	    })
+	
+	    $('.fa-pause').on('click',function(){
+	        myStopFunction()
 	    })
 	
 	        // console.log(nestarray)
@@ -339,7 +371,6 @@
 	
 	
 	 function tipOn(d, i){
-	    console.log(d)
 	      var dat = d;
 	    var elem = ".course.s-" + i;
 	      $(".tip").empty();
@@ -398,7 +429,16 @@
 	  $(".course").removeClass("highlight");
 	}
 	
+	document.getElementById("slider").addEventListener("change", function(){
+	            var slider_val = document.getElementById("slider").value
+	            year_counter = slider_val
+	            changeYear(slider_val)
+	            
+	        });
+	
 	    function changeYear(year){
+	        document.getElementById("slider").value = year;
+	
 	            nestarray = d3.nest().key(function(d){
 	                        return getBucket(d['val'])
 	                    }).entries(
@@ -475,18 +515,27 @@
 	                    } else {
 	                        if (college_val!='all' && course_val=='all'){
 	                            if (d.college == college_val){
+	                                if (!$('.tip').attr('style').match('none')){
+	                                    tipOn(d)
+	                                }
 	                                return "#C3FF00"
 	                            } else {
 	                                return "#3a3a3a"
 	                            }
 	                        } else if (course_val!='all' && college_val=='all'){
 	                            if (d.course == course_val){
+	                                if (!$('.tip').attr('style').match('none')){
+	                                    tipOn(d)
+	                                }
 	                                return "#C3FF00"
 	                            } else {
 	                                return "#3a3a3a"
 	                            }
 	                        } else {
 	                            if (d.course == course_val && d.college == college_val){
+	                                if (!$('.tip').attr('style').match('none')){
+	                                    tipOn(d)
+	                                }
 	                                return "#C3FF00"
 	                            } else {
 	                                return "#3a3a3a"

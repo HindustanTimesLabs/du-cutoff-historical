@@ -15,9 +15,11 @@ function getRect(w){
         return 16
     } else if (w>600){
         return 13
-    } else{
+    } else if (w>500){
         return 12
-    } 
+    } else{
+        return 10
+    }
 }
 var options = {
       rectWidth: getRect(container_width),
@@ -241,26 +243,40 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
 
     
 
-    $('#play .fa-play,.play-button-new .fa-play').on('click',function(){
-        if (!$(body).hasAttribute('playing')){
+    $('.fa-play').on('click',function(){
+        if ($(this).hasClass('fa-play')){
+            $('#play i,.play-button-new i').removeClass('fa-play')
+                $('#play i,.play-button-new i').addClass('fa-pause')
             myVar = setInterval(function(){ 
                 myTimer() 
-            }, 4000);
-            $(body).attr('playing','y')
+                $('body').attr('playing','y')
+                
+            }, 3500);
+        } else {
+            stopSlider()
         }
-        $('.fa-play').removeClass('.fa-play')
-        $('.addClass').removeClass('.fa-pause')
+        
 
         //scroll to partcular section on the page
         var buffer = 0
         var pos = $('.sentence').offset();
-        console.log(pos)
         pos.top = pos.top - buffer;
         $('html, body').animate({scrollTop:(pos.top)}, 1200);
     })
 
-    $('.fa-pause').on('click',function(){
+    function stopSlider(){
         myStopFunction()
+        $('#play i,.play-button-new i').removeClass('fa-pause')
+        $('#play i,.play-button-new i').addClass('fa-play')
+        $('body').attr('playing','n')
+        
+        
+    }
+
+    $(document.getElementsByClassName('fa-pause')).on('click',function(){
+        
+        stopSlider()
+
     })
 
         // console.log(nestarray)
@@ -519,10 +535,16 @@ function getBucket(val){
 }
 
 function getSentence(dat, year_counter){
+    var adj
+    if (year_counter<2017){
+        adj = 'had'
+    } else {
+        adj = 'has'
+    }
     if (dat[year_counter+"_min"]=="NA"){
         return "The "+ year_counter +" cutoff for <b>"+dat.course+" in "+dat.college+"</b> is unknown."
     } else {
-        return "<b>"+dat.course+"</b> in <b>"+dat.college+"</b> had a <b>" + dat[year_counter+"_min"]+"%</b> cutoff in <b>"+year_counter+"</b>."
+        return "<b>"+dat.course+"</b> in <b>"+dat.college+"</b> "+adj+" a <b>" + dat[year_counter+"_min"]+"%</b> cutoff in <b>"+year_counter+"</b>."
     }
 }
 

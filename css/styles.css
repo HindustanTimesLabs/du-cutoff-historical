@@ -21,6 +21,9 @@
     font-style: italic; }
   .labels p span:after {
     content: " options"; }
+  @media (max-width: 500px) {
+    .labels p {
+      font-size: 0.9em; } }
 
 .year-text {
   font-size: 2.5em;
@@ -30,6 +33,10 @@
   @media (max-width: 800px) {
     .year-text {
       font-size: 2em; } }
+  @media (max-width: 600px) {
+    .year-text {
+      font-size: 1.5em;
+      color: #13294A; } }
 
 a {
   color: inherit; }
@@ -53,6 +60,10 @@ img.graphic {
   @media (max-width: 800px) {
     .ins.copy {
       font-size: 0.9em; } }
+  @media (max-width: 600px) {
+    .ins.copy {
+      font-size: 0.8em;
+      line-height: 1.1em; } }
 
 .hide-desktop {
   display: none; }
@@ -354,7 +365,8 @@ section h2 {
   background-color: #eee; }
   @media (max-width: 700px) {
     .sentence {
-      padding: 0.5 0.5 1em 0.5; } }
+      padding: 0.5em 0.5em 1em 0.5em;
+      font-size: 1em; } }
 
 .fa-play, .fa-pause:hover {
   color: #aaa; }

@@ -38,6 +38,9 @@ $jhatak: #C3FF00;
     span:after{
         content:" options";
     }
+    @media(max-width: 500px){
+        font-size: 0.9em;
+    }
 }
 .year-text{
     font-size: 2.5em;
@@ -46,7 +49,10 @@ $jhatak: #C3FF00;
     font-family: $block;
     @media(max-width: 800px){
         font-size: 2em;
-
+    }
+    @media(max-width: 600px){
+        font-size: 1.5em;
+        color: #13294A
     }
 }
 
@@ -72,7 +78,12 @@ img.graphic{
     margin: 0.5em auto;
     font-size: 1.1em;
     @media(max-width: 800px){
-        font-size: 0.9em;
+        font-size: 0.9em
+
+    }
+    @media(max-width: 600px){
+        font-size: 0.8em;
+        line-height: 1.1em;
     }
 }
 
@@ -442,7 +453,8 @@ section{
     font-size: 1.2em;
     background-color: #eee;
     @media(max-width: 700px){
-        padding: 0.5 0.5 1em 0.5 ;
+        padding: 0.5em 0.5em 1em 0.5em ;
+        font-size: 1em;
     }
 
 }

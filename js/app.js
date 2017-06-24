@@ -4,7 +4,7 @@ var d3 = require('d3')
 var $ = jQuery = require('jquery')
 var _ = require('underscore')
 
-var shortlist = ["B.A. (P)","B.Com. (Hons.)","B.Com. (Pass)","Biochemistry","Botany","Chemistry","Computer Science","Economics","Electronics","Food Technology","Geography","Hindi","History","Mathematics","Micro","Microbiology","Philosophy","Physical Science","Physics","Political Science","Psychology","Sociology","Statistics","Zoology","Sanskrit","Urdu"]
+var shortlist = ["B.A. (P)","B.Com. (Hons.)","B.Com. (Pass)","Biochemistry","Botany","Chemistry","Computer Science","Economics","Electronics","Food Technology","Geography","Hindi","History","Mathematics","Micro","Microbiology","Philosophy","Physical Sciences","Physics","Political Science","Psychology","Sociology","Statistics","Zoology","Sanskrit","Urdu"]
 
 var container_width = $(window).width()
 var container_height = $(window).height(); 
@@ -146,13 +146,13 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
             .style('fill',function(d){
                 if (college_val=='all'){
                     if (d.course == course_val){
-                        return "magenta"
+                        return "#FFFD50"
                     } else {
                         return "#3a3a3a"
                     }
                 } else {
                     if (d.course == course_val&&d.college == college_val){
-                        return "magenta"
+                        return "#FFFD50"
                     } else {
                         return "#3a3a3a"
                     }
@@ -175,13 +175,13 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
             .style('fill',function(d){
                 if (course_val=='all'){
                     if (d.college == college_val){
-                        return "magenta"
+                        return "#FFFD50"
                     } else {
                         return "#3a3a3a"
                     }
                 } else {
                     if (d.college == college_val&&d.course == course_val){
-                        return "magenta"
+                        return "#FFFD50"
                     } else {
                         return "#3a3a3a"
                     }
@@ -225,14 +225,19 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
         .attr('width', options.rectWidth * (column_numbers+2))
         .attr('height', container_height)
         .attr('class','chart')
+        .on("mouseout", function(){
+            $(".tip").hide()
+        } );
+
 
     var g = svg.append('g')
                 .attr('transform','translate('+margin.left+","+margin.top+")")
+
     var courses = g.selectAll('.course')
                     .data(filtered_data)
                     .enter()
                     .append('rect')
-                    .attr('class','course')
+                    .attr('class',function(d,i){return 'course s-'+i})
                     .attr('width', options.rectWidth)
                   .attr('height', options.rectHeight)
                   .attr('vector-effect', 'non-scaling-stroke')
@@ -249,11 +254,91 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
                   .on('click',function(d){
                     console.log(d)
                   })
+                    .on("mouseover", function(d){
+                        tipOn(d)
+                        d3.select(this)
+                            .style('opacity', 0.5)
+                            .style('stroke-width','3')
 
-    $('.label').css('left',($('.chart').position().left)+(margin.left)+"px")
-    $('.label').css('padding-top',(margin.top))
-    $($('.label')[0]).css('padding-top','0')
-    $($('.label')[0]).css('top','0')
+
+                    })
+                    .on("mouseout", function(d){
+                        tipOff(d)
+                        d3.select(this)
+                            .style('opacity', 1)
+                            .style('stroke-width','2')
+                            
+
+                    });
+
+        var chart_pos = $('.chart').position().left
+        $('.label').css('left',(chart_pos)+(margin.left)+"px")
+        $('.label').css('padding-top',(margin.top))
+        $($('.label')[0]).css('padding-top','0')
+        $($('.label')[0]).css('top','0')
+
+
+
+ function tipOn(d, i){
+    console.log(d)
+      var dat = d;
+    var elem = ".course.s-" + i;
+      $(".tip").empty();
+
+      // show
+      $(".tip").show();
+      $(".course").removeClass("highlight");
+      $(elem).addClass("highlight");
+      // populate
+      $(".tip").append(getSentence(dat, year_counter));
+      // position
+
+      // calculate top
+      function calcTop(d){
+        var obj = _.findWhere(flattened, {'course':d.course, 'college':d.college})
+        var y2 =  obj.y
+        var h = $(".tip").height();
+        var ot = $("svg").offset().top;
+        var st = $(window).scrollTop();
+        var r = options.rectHeight*1.5;
+        var t = y2 - r - h + ot - st + 20 ;
+
+        if (t < 40){
+          t = y2 + (h/2.7) + ot - st + 20;
+          $(".tip").addClass("bottom").removeClass("top");
+        } else {
+          $(".tip").addClass("top").removeClass("bottom");
+        }
+        return t;
+      }
+
+      function calcLeft(d){
+        var obj = _.findWhere(flattened, {'course':d.course, 'college':d.college})
+        var x2 = obj.x
+        var r = options.rectWidth/2;
+        var w = $(".tip").width();
+        var l = x2 - w / 2 + r;
+        var m = ($(window).width() > 1200 ? 0 : margin.left-r)
+        return x2 - (w / 2) + margin.left+chart_pos + r;
+      }
+
+      $(".tip").css({
+        top: calcTop(dat),
+        left: calcLeft(dat)
+      });
+
+      $(window).resize(function(){
+        $(".tip").css({
+          top: calcTop(dat),
+          left: calcLeft(dat)
+        });
+      });
+    }
+
+function tipOff(d){
+  $(".course").removeClass("highlight");
+}
+
     function changeYear(year){
             nestarray = d3.nest().key(function(d){
                         return getBucket(d['val'])
@@ -283,12 +368,7 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
             
 
             sorted_nestarray.forEach(function(group,index){
-                if (group.key=="Unknown"){
-                    group.values.forEach(function(d){
-                        // if (d.course!="B.A. (P)"&&!d.course.match("Com."))
-                        console.log(d.course+"   |||  "+d.college)
-                    })
-                }
+
                 $('.label[data-which="'+group.key+'"] span').text(group.values.length)
 
                      if (index!=0){
@@ -316,7 +396,9 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
                   })
             })
             flattened = ( _.chain(sorted_nestarray).pluck('values').flatten().value())
-             $('.year-text').html(year_counter)
+            
+            $('.year-text').html(year_counter)
+            
             d3.selectAll('.course')
                 .transition()
                 .duration(1000)
@@ -334,19 +416,19 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
                     } else {
                         if (college_val!='all' && course_val=='all'){
                             if (d.college == college_val){
-                                return "magenta"
+                                return "#FFFD50"
                             } else {
                                 return "#3a3a3a"
                             }
                         } else if (course_val!='all' && college_val=='all'){
                             if (d.course == course_val){
-                                return "magenta"
+                                return "#FFFD50"
                             } else {
                                 return "#3a3a3a"
                             }
                         } else {
                             if (d.course == course_val && d.college == college_val){
-                                return "magenta"
+                                return "#FFFD50"
                             } else {
                                 return "#3a3a3a"
                             }
@@ -373,3 +455,28 @@ function getBucket(val){
         return "Unknown"
     }
 }
+
+function getSentence(dat, year_counter){
+    if (dat[year_counter+"_min"]=="NA"){
+        return "The "+ year_counter +" cutoff for <b>"+dat.course+" in "+dat.college+"</b> is unknown."
+    } else {
+        return "<b>"+dat.course+"</b> in <b>"+dat.college+"</b> had a <b>" + dat[year_counter+"_min"]+"%</b> cutoff in <b>"+year_counter+"</b>."
+    }
+}
+
+d3.selection.prototype.moveToFront = function() {
+  return this.each(function(){
+    this.parentNode.appendChild(this);
+  });
+};
+
+d3.selection.prototype.moveToBack = function() {
+    return this.each(function() {
+        var firstChild = this.parentNode.firstChild;
+        if (firstChild) {
+            this.parentNode.insertBefore(this, firstChild);
+        }
+    });
+};
+
+

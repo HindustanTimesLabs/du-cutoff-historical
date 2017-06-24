@@ -69,14 +69,14 @@ Zoology,Kirori Mal,84,80,80,85,88,89,91,96,97,97.33
 Home Science (H),Lady Irwin,66.33,66,63,65,72,75,82,83,85,NA
 Zoology,Maitreyi,74,72,70,78,80,85,80,90,93,92
 Zoology,Miranda House,75,80.33,84,88,90,93,95,96.67,96.67,97
-B.Com. (Hons.),S.G.G.S College of Commerce,93,94,94,95,95.25,95.5,NA,NA,NA,NA
+B.Com. (Hons.),S.G.G.S College of Commerce,93,94,94,95,95.25,NA,96.5,97,97.5,97
 English,P.G.D.A.V.,86,84,84,82,85,88,87,91,94,95
 Zoology,Ramjas,78,79,78,81,88,88,90,92,93.66,96
 Zoology,S.G.T.B. Khalsa,70,71,72,NA,78,90,89,94,95.66,97
 Zoology,Shivaji,71,75,65,68,73,80,88,93,94,95
 Zoology,Sri Venketeswara,81,90,82,85,86.33,92,94,94,95,95.33
 Zoology,Swami Shardhanand,70,NA,70,70,NA,NA,90,88,88,90
-B.Com. (Pass),Atma Ram Sanatan Dharma College,88,87,87,90,90,95,NA,NA,NA,NA
+B.Com. (Pass),Atma Ram Sanatan Dharma College,88,87,87,90,90,NA,95,97,97,96
 Biochemistry,Daulat Ram,89,83,88,89,85,89,94,92,95,95
 Biochemistry,Deshbandhu,80,82,77,80,76,78,83,83,89,96
 Biochemistry,Institute of Home Economics,89,75,72,72,72,85,90,90,92,92
@@ -136,6 +136,7 @@ Mathematics,Shivaji,65,NA,70,78,85,85,87,97,97,97
 Mathematics,Sri Venketeswara,90,NA,85,87,87,96,91,97,97,97
 Statistics,Hindu,92.5,91.5,93,94,95,95.5,96,97.75,98,96.75
 Home Science (H),Institute of Home Economics,75,65,NA,60,65,80,85,85,83,NA
+B.Com. (Pass),Kalindi,85,85,85,85,87,NA,90,92,94,93
 Mathematical Science,Keshav Mahavidyalaya,71,72,75,76,78,NA,82,90,94,92
 Statistics,Kirori Mal,89,91,92,94,94,95,95.5,97,97.5,96.25
 Statistics,Lady Shri Ram College for Women,92,92,91.5,94.5,95,96,97,97.25,97.25,96.75
@@ -148,6 +149,7 @@ Physical Sciences,Deshbandhu,65,62,60,65,70,NA,80,88,88,89
 Physical Sciences,Gargi,66,65,65.33,67,71,NA,88,89,90,89
 Physical Sciences,Hans Raj,77,75,75,83,84,NA,94.33,NA,NA,95
 Physical Sciences,Kalindi,70,NA,62,70,68,NA,82,84,86,89
+B.Com. (Hons.),Kalindi,88,88,88,88,90,NA,94,95,97,96
 Physical Sciences,Kirori Mal,74,73,75,85,87,NA,86,92,92,92
 Mathematical Science,Maharaja Agrasen,74,72,72,73,73,NA,NA,NA,91,90
 Physical Sciences,Maitreyi,70,68,67,75,78,NA,87,NA,NA,NA
@@ -167,7 +169,7 @@ Life Science,Hans Raj,76,80,80,84,87,NA,94.33,95,95,95
 Economics,Kalindi,84,88,88,88,90,90,95,97,98.5,96
 Life Science,Kirori Mal,74,76,75,83,86,NA,89,94,94.5,95
 Life Science,Maitreyi,70,68,65,75,78,NA,78,82,86,88
-B.Com. (Pass),P.G.D.A.V.,85,91,89,87,89,94,NA,NA,NA,NA
+B.Com. (Pass),P.G.D.A.V.,85,91,89,87,89,NA,94.5,92.5,94.5,95
 Life Science,Ramjas,74,76,75,72,77,NA,85,86,88,92
 Life Science,S.G.T.B. Khalsa,68,68,68,70,74,NA,76,90,94,95.33
 Life Science,Shivaji,67,58,60,64,69,NA,NA,86,86,91
@@ -175,7 +177,7 @@ Life Science,Sri Aurobindo,62,65,66,66,66,NA,85,83,82,84
 Life Science,Sri Venketeswara,76,73,74,77,79,NA,86,87,88,90
 Life Science,Swami Shardhanand,68,64,65,65,68,NA,90,85,87,92
 English,Atma Ram Sanatan Dharma College,83,82,82,84,84,90,93,95,96,96
-B.Com. (Hons.),P.G.D.A.V.,88,91,91,90,92,94,NA,NA,NA,NA
+B.Com. (Hons.),P.G.D.A.V.,88,91,91,90,92,NA,NA,95,96.5,96.5
 B.Sc. Applied Physical Sciences with Industrial Chemistry,Rajdhani,72,66,60,65,68,NA,NA,NA,NA,87
 Biological Science,Sri Venketeswara,87,NA,81,83,85,NA,92,92,96,95
 B.A. (P),Atma Ram Sanatan Dharma College,78,78,77,76,77,NA,85,91,93,91
@@ -229,69 +231,81 @@ B.A. (P),Sri Aurobindo,62,65,66,68,72,NA,82,83,82,83
 B.A. (P),Sri Aurobindo (E.),60,57,56,65,67,NA,84,80,90,88
 B.A. (P),Swami Shardhanand,74,75,70,70,75,NA,85,86,80,86
 B.A. (P),Zakir Husain (E.),75,68,75,75,76,NA,80,65,80,80
-B.Com. (Pass),Aditi Mahavidyalaya,75,76,73,75,77,87,NA,NA,NA,NA
-B.Com. (Pass),Bhagini Nivedita,72,74,74,78,78,88,NA,NA,NA,NA
-B.Com. (Pass),Bhim Rao Ambedkar,86,83,86,87,94,95,NA,NA,NA,NA
-B.Com. (Pass),Daulat Ram,91.25,91.5,93,92,93,96,NA,NA,NA,NA
-B.Com. (Pass),Delhi College of Arts and Commerce,89,89,90,93,93,96.5,NA,NA,NA,NA
-B.Com. (Pass),Dyal Singh,87,85,87,87,89,93,NA,NA,NA,NA
-B.Com. (Pass),Dyal Singh (E.),80,79,80,80,82,87,NA,NA,NA,NA
-B.Com. (Pass),Gargi,90,88.75,89.25,92,92,95,NA,NA,NA,NA
-B.Com. (Pass),Janki Devi Memorial,84,85,85.5,89,89,94,NA,NA,NA,NA
-B.Com. (Pass),Kamala Nehru,85,89,88,89,91,94,NA,NA,NA,NA
-B.Com. (Pass),Kirori Mal,92,93,93,96,95,96.75,NA,NA,NA,NA
-B.Com. (Pass),Lakshmibai,89,84,85,86,91,90,NA,NA,NA,NA
-B.Com. (Pass),Mata Sundri,88,88,93,90,89,90,NA,NA,NA,NA
-B.Com. (Pass),Maitreyi,91,89,90,90,92,95.5,NA,NA,NA,NA
-B.Com. (Pass),Motilal Nehru,86,86,86,89,90,95,NA,NA,NA,NA
-B.Com. (Pass),Motilal Nehru (E.),80,80,83,84,86,90,NA,NA,NA,NA
-B.Com. (Pass),P.G.D.A.V. (E.),82,82,82,83,85,86,NA,NA,NA,NA
-B.Com. (Pass),Ramjas,92,93,93.5,94,95.5,96.5,NA,NA,NA,NA
-B.Com. (Pass),Shivaji,83,84,82,85,92,96,NA,NA,NA,NA
-B.Com. (Pass),Satyawati (E.),78,77,74,81,85,88,NA,NA,NA,NA
-B.Com. (Pass),Shaheed Bhagat Singh,88,87,87,88,90,96,NA,NA,NA,NA
-B.Com. (Pass),S.G.T.B. Khalsa,92,92.5,93.5,94.5,94.75,96,NA,NA,NA,NA
-B.Com. (Pass),Shyama Prasad Mukherji College,83,80,84,86,86,90,NA,NA,NA,NA
-B.Com. (Pass),Shyam Lal,84,83,81,85,85,89,NA,NA,NA,NA
-B.Com. (Pass),Shyam Lal (E.),75,75,75,83,85,86,NA,NA,NA,NA
-B.Com. (Pass),Sri Aurobindo,80,80,81,85,85,93,NA,NA,NA,NA
-B.Com. (Pass),Sri Aurobindo (E.),78,72,75,77,79,88,NA,NA,NA,NA
-B.Com. (Pass),Zakir Husain (E.),81,75,80,85,87,88,NA,NA,NA,NA
-B.Com. (Hons.),Aditi Mahavidyalaya,80,81,78,80,83,87,NA,NA,NA,NA
-B.Com. (Hons.),Bhim Rao Ambedkar,88,85,88,89,95,95,NA,NA,NA,NA
-B.Com. (Hons.),College of Vocational Studies,91,90,88,90.5,73.5,95,NA,NA,NA,NA
-B.Com. (Hons.),Daulat Ram,92.5,93,95,94,95.5,96,NA,NA,NA,NA
-B.Com. (Hons.),Deen Dayal Upadhyaya,90,90,91,92,94,95,NA,NA,NA,NA
-B.Com. (Hons.),Delhi College of Arts and Commerce,91,91,92,94,95,96.5,NA,NA,NA,NA
-B.Com. (Hons.),Dyal Singh,88,87,89,89,91,93,NA,NA,NA,NA
-B.Com. (Hons.),Dyal Singh (E.),84,82,83,83,85,87,NA,NA,NA,NA
-B.Com. (Hons.),Gargi,93,91.75,92.75,94.5,94.5,95,NA,NA,NA,NA
-B.Com. (Hons.),Hans Raj,94,94.25,95,95.75,96.25,96.75,NA,NA,NA,NA
-B.Com. (Hons.),I.P. College,91.75,93,93,94,95.25,95.5,NA,NA,NA,NA
-B.Com. (Hons.),Janki Devi Memorial,87,87,88,91,92,94,NA,NA,NA,NA
-B.Com. (Hons.),Kamala Nehru,90,93,92,94,94.5,94,NA,NA,NA,NA
-B.Com. (Hons.),Keshav Mahavidyalaya,91,91,92,94,94,97,NA,NA,NA,NA
-B.Com. (Hons.),Kirori Mal,94,94.25,95.5,97,96.75,96.75,NA,NA,NA,NA
-B.Com. (Hons.),Lady Shri Ram College for Women,95.5,95.25,95,97,97,97.75,NA,NA,NA,NA
-B.Com. (Hons.),Lakshmibai,90,88,88,91,93,90,NA,NA,NA,NA
-B.Com. (Hons.),Mata Sundri,90,90,94,92,91,90,NA,NA,NA,NA
-B.Com. (Hons.),Maharaja Agrasen,88,88,88,89,90,93,NA,NA,NA,NA
-B.Com. (Hons.),Maitreyi,93,91,92,94,95,95.5,NA,NA,NA,NA
-B.Com. (Hons.),Motilal Nehru,89,89,89,91,92,95,NA,NA,NA,NA
-B.Com. (Hons.),Motilal Nehru (E.),82,82,85,86,88,90,NA,NA,NA,NA
-B.Com. (Hons.),P.G.D.A.V. (E.),84,84,84,85,86,86,NA,NA,NA,NA
-B.Com. (Hons.),Rajdhani,87.5,88.5,87,89,90,95,NA,NA,NA,NA
-B.Com. (Hons.),Ramjas,93.5,94.5,94.5,95,96,96.5,NA,NA,NA,NA
-B.Com. (Hons.),Shivaji,85,86,84,87,94,96,NA,NA,NA,NA
-B.Com. (Hons.),Satyawati (E.),80,79,76,84,88,88,NA,NA,NA,NA
-B.Com. (Hons.),Shaheed Bhagat Singh,90,89.5,90,91,93,96,NA,NA,NA,NA
-B.Com. (Hons.),S.G.T.B. Khalsa,92.5,93,94,94.75,95,96,NA,NA,NA,NA
-B.Com. (Hons.),Shyama Prasad Mukherji College,87,85,90,88,88,90,NA,NA,NA,NA
-B.Com. (Hons.),Shyam Lal,86,86,83,87,87,89,NA,NA,NA,NA
-B.Com. (Hons.),Shyam Lal (E.),79,79,80,85,88,86,NA,NA,NA,NA
-B.Com. (Hons.),Sri Aurobindo,84,84,85,88,89,93,NA,NA,NA,NA
-B.Com. (Hons.),Sri Aurobindo (E.),82,80,81,83,85,88,NA,NA,NA,NA
-B.Com. (Hons.),Zakir Husain (E.),82,77,85,87,89,88,NA,NA,NA,NA
+B.Com. (Pass),Aditi Mahavidyalaya,75,76,73,75,77,NA,80,81,84.5,86.5
+B.Com. (Pass),Bhagini Nivedita,72,74,74,78,78,NA,88,90,88,88
+B.Com. (Pass),Bhim Rao Ambedkar,86,83,86,87,94,NA,95,92,93,92
+B.Com. (Pass),Daulat Ram,91.25,91.5,93,92,93,NA,95,96.5,96.5,96
+B.Com. (Pass),Delhi College of Arts and Commerce,89,89,90,93,93,NA,95,96,96.25,96
+B.Com. (Pass),Dyal Singh,87,85,87,87,89,NA,92,94,95,95.5
+B.Com. (Pass),Dyal Singh (E.),80,79,80,80,82,NA,90,92,93,95
+B.Com. (Pass),Gargi,90,88.75,89.25,92,92,NA,94.5,96,96.25,96
+B.Com. (Pass),Janki Devi Memorial,84,85,85.5,89,89,NA,95,96,95.5,95
+B.Com. (Pass),Jesus & Mary,91.75,92.25,92.75,93.25,94.5,NA,NA,NA,98.25,NA
+B.Com. (Pass),Kamala Nehru,85,89,88,89,91,NA,94,95,95,94
+B.Com. (Pass),Kirori Mal,92,93,93,96,95,NA,96,96.25,96.5,97
+B.Com. (Pass),Lakshmibai,89,84,85,86,91,NA,92,93,93.5,94
+B.Com. (Pass),Mata Sundri,88,88,93,90,89,NA,91,92,92,95
+B.Com. (Pass),Maitreyi,91,89,90,90,92,NA,94,94,95,95
+B.Com. (Pass),Motilal Nehru,86,86,86,89,90,NA,91,92,97,95.5
+B.Com. (Pass),Motilal Nehru (E.),80,80,83,84,86,NA,89,94,95,93
+B.Com. (Pass),P.G.D.A.V. (E.),82,82,82,83,85,NA,86,90,92,92
+B.Com. (Pass),Ram Lal Anand,85,85,85,86,87,NA,95,96,97,96
+B.Com. (Pass),Ramjas,92,93,93.5,94,95.5,NA,96,96.75,98.75,96.5
+B.Com. (Pass),Shivaji,83,84,82,85,92,NA,94,96,96.5,97
+B.Com. (Pass),Satyawati Co-Ed.,88,87,87,87.5,88,NA,89,91,93,95
+B.Com. (Pass),Satyawati (E.),78,77,74,81,85,NA,90,90,90,91
+B.Com. (Pass),Shaheed Bhagat Singh,88,87,87,88,90,NA,94,95.25,96.5,95
+B.Com. (Hons.),Shri Ram College of Commerce,94.5,95.25��_��_��_98.75,95.25,96,96.5,NA,97.5,97.375,98,97.75
+B.Com. (Pass),S.G.T.B. Khalsa,92,92.5,93.5,94.5,94.75,NA,96.75,96.5,98.75,98.25
+B.Com. (Pass),S.G.N.D. Khalsa,89,91,90,89,90,NA,92,92,94,96
+B.Com. (Pass),Shyama Prasad Mukherji College,83,80,84,86,86,NA,91,91,91,91
+B.Com. (Pass),Shyam Lal,84,83,81,85,85,NA,90,91,93,92.5
+B.Com. (Pass),Shyam Lal (E.),75,75,75,83,85,NA,88,92,92,93
+B.Com. (Pass),Sri Aurobindo,80,80,81,85,85,NA,90,91,92,93
+B.Com. (Pass),Sri Aurobindo (E.),78,72,75,77,79,NA,85,90,92,93
+B.Com. (Pass),Swami Shardhanand,80,80,78,80,82,NA,93,92,92,92
+B.Com. (Pass),Zakir Husain (E.),81,75,80,85,87,NA,88,90,91,91
+B.Com. (Hons.),Aditi Mahavidyalaya,80,81,78,80,83,NA,89,89.5,92,92.5
+B.Com. (Hons.),Bhim Rao Ambedkar,88,85,88,89,95,NA,97,95,96,95
+B.Com. (Hons.),College of Vocational Studies,91,90,88,90.5,73.5,NA,96,98,98,96.5
+B.Com. (Hons.),Daulat Ram,92.5,93,95,94,95.5,NA,96.5,97,96.75,96.5
+B.Com. (Hons.),Deen Dayal Upadhyaya,90,90,91,92,94,NA,95,97,96.5,96.5
+B.Com. (Hons.),Delhi College of Arts and Commerce,91,91,92,94,95,NA,97.5,97,97.25,97
+B.Com. (Hons.),Dyal Singh,88,87,89,89,91,NA,94,96,98,97
+B.Com. (Hons.),Dyal Singh (E.),84,82,83,83,85,NA,92,94,95,96
+B.Com. (Hons.),Gargi,93,91.75,92.75,94.5,94.5,NA,96,97,97.25,97
+B.Com. (Hons.),Hans Raj,94,94.25,95,95.75,96.25,NA,NA,97.25,97.75,97.5
+B.Com. (Hons.),Hindu,94,94.75,NA,95.5,96.25,NA,NA,97.25,97.75,97.5
+B.Com. (Hons.),I.P. College,91.75,93,93,94,95.25,NA,96,97,97,97.5
+B.Com. (Hons.),Janki Devi Memorial,87,87,88,91,92,NA,96,97,96.75,96
+B.Com. (Hons.),Jesus & Mary,93,93.75,73.75,94.5,95.5,NA,NA,NA,99,NA
+B.Com. (Hons.),Kamala Nehru,90,93,92,94,94.5,NA,96,97,97,96
+B.Com. (Hons.),Keshav Mahavidyalaya,91,91,92,94,94,NA,97,96.75,96.75,96.75
+B.Com. (Hons.),Kirori Mal,94,94.25,95.5,97,96.75,NA,97,97.25,97.5,97.25
+B.Com. (Hons.),Lady Shri Ram College for Women,95.5,95.25,95,97,97,NA,NA,98,98,97.25
+B.Com. (Hons.),Lakshmibai,90,88,88,91,93,NA,94,96,96.5,97
+B.Com. (Hons.),Mata Sundri,90,90,94,92,91,NA,93,94,94,96
+B.Com. (Hons.),Maharaja Agrasen,88,88,88,89,90,NA,96,96,96.5,95
+B.Com. (Hons.),Maitreyi,93,91,92,94,95,NA,96,96,97,97
+B.Com. (Hons.),Motilal Nehru,89,89,89,91,92,NA,94,95,98,96.5
+B.Com. (Hons.),Motilal Nehru (E.),82,82,85,86,88,NA,90,95,96,95
+B.Com. (Hons.),P.G.D.A.V. (E.),84,84,84,85,86,NA,90,92,94,94
+B.Com. (Hons.),Rajdhani,87.5,88.5,87,89,90,NA,94,94,96.5,95.5
+B.Com. (Hons.),Ram Lal Anand,87,87,87,92,91,NA,96,97,98,97
+B.Com. (Hons.),Ramjas,93.5,94.5,94.5,95,96,NA,96.75,97.75,99.25,97.5
+B.Com. (Hons.),Shivaji,85,86,84,87,94,NA,96,97,97.5,98
+B.Com. (Hons.),Satyawati Co-Ed.,92,90,90,90.5,91,NA,93.5,95,96,97
+B.Com. (Hons.),Satyawati (E.),80,79,76,84,88,NA,NA,92,92,93
+B.Com. (Hons.),Shaheed Bhagat Singh,90,89.5,90,91,93,NA,96.5,96.25,97.25,96
+B.Com. (Hons.),S.G.T.B. Khalsa,92.5,93,94,94.75,95,NA,96.5,96.75,98,98
+B.Com. (Hons.),S.G.N.D. Khalsa,90,92,92,91,92,NA,94,94,95,97
+B.Com. (Hons.),Shyama Prasad Mukherji College,87,85,90,88,88,NA,93,93,93,93
+B.Com. (Hons.),Shyam Lal,86,86,83,87,87,NA,92,94,96,95.5
+B.Com. (Hons.),Shyam Lal (E.),79,79,80,85,88,NA,90,95,95,96
+B.Com. (Hons.),Sri Aurobindo,84,84,85,88,89,NA,93,94,95,95
+B.Com. (Hons.),Sri Aurobindo (E.),82,80,81,83,85,NA,90,93,95,95
+B.Com. (Hons.),Swami Shardhanand,85,86,82,84,86,NA,95,94,94,95
+B.Com. (Hons.),Zakir Husain (E.),82,77,85,87,89,NA,90,91,93,93
 Economics,College of Vocational Studies,88,88,NA,90,93,94,96,97,97,96
 Economics,Daulat Ram,91.5,91,92.5,93.5,95,96,97,97,97,96.5
 Economics,Delhi College of Arts and Commerce,89.5,89.5,91,93,94,95,96.5,97,97,97
@@ -504,7 +518,7 @@ Sanskrit,Shyama Prasad Mukherji College,55,50,50,50,50,50,55,55,60,60
 Applied Psychology,Sri Aurobindo (E.),68,67,NA,72,78,NA,NA,90,92,92
 Political Science,Atma Ram Sanatan Dharma College,72,69,69,70,73,82,85,93,94,93
 B.A. (Voc. Studies) Human Resource Management (HRM),College of Vocational Studies,84,84,84,82,84,NA,NA,NA,NA,91.5
-B.Com. (Hons.),Deshbandhu,88,88,88,88,93,91,NA,NA,NA,NA
+B.Com. (Hons.),Deshbandhu,88,88,88,88,93,NA,93,95,95,95
 Sanskrit,Hans Raj,53,53,62,62,62,70,70,72,71,71
 Sociology,Hindu,87,87.5,NA,90,90,94.5,96.5,95.5,96,96.25
 Sociology,Janki Devi Memorial,45,78,65,70,72,78,85,88,89,90
@@ -514,7 +528,7 @@ Sociology,Lady Shri Ram College for Women,92.25,91.5,91.5,94,93.5,96.5,96,97,96.
 Sociology,Maitreyi,74,75,76,76,80,82,82,90,91,94
 Sociology,Miranda House,85.75,86,88.5,89.5,90.5,94,95.5,95.5,95.75,96
 History,Sri Venketeswara,80,82,82,85,86,88,92,92,96,96
-B.Com. (Pass),Sri Venketeswara,92,92.5,94,96,96,96.75,NA,NA,NA,NA
+B.Com. (Pass),Sri Venketeswara,92,92.5,94,96,96,NA,96.25,96.5,96.75,96.5
 Mathematics,Atma Ram Sanatan Dharma College,85,78,74,78,80,90,96,96,97,96
 Applied Psychology,Bhim Rao Ambedkar,89,80,80,80,91,NA,NA,92,92,91
 B.A. (Voc. Studies) Marketing Management and Retail Business (MMRB),College of Vocational Studies,83,82,82,81,83,NA,NA,NA,NA,91
@@ -530,7 +544,7 @@ Psychology,Mata Sundri,81,75,80,82,85,NA,90,93,94,95
 Urdu,Satyawati Co-Ed.,50,45,45,45,45,45,48,52,53,55
 Applied Psychology,Shyama Prasad Mukherji College,78,78.5,79.5,79.5,NA,NA,NA,89,92,92.5
 Hindi,Sri Venketeswara,68,68,70,72,72,75,72,77,84,83
-B.Com. (Hons.),Sri Venketeswara,94.5,94.5,95,97,97,96.75,NA,NA,NA,NA
+B.Com. (Hons.),Sri Venketeswara,94.5,94.5,95,97,97,NA,97.25,97.5,97.75,97.5
 Geography,Aditi Mahavidyalaya,70,70,75,70,70,80,82,80,84,84
 Geography,Bhim Rao Ambedkar,80,77,77,78,91,85,92,92,92,91
 B.A. (Voc. Studies) Small and Medium Enterprises (SME),College of Vocational Studies,77,76,76,75,76,NA,NA,NA,NA,86
@@ -552,7 +566,7 @@ History,Kalindi,65,60,60,65,65,70,80,82,82,82
 Urdu,Kirori Mal,60,70,60,65,55,58,60,62,62,65
 Journalism,Lady Shri Ram College for Women,75+Test,NA,77,NA,NA,97.5,96,98.5,97.5,98
 Punjabi,Mata Sundri,60,NA,45,NA,47,45,50,55,55,60
-B.Com. (Pass),S.G.G.S College of Commerce,91.25,92.5,92.5,93,93.5,95.5,NA,NA,NA,NA
+B.Com. (Pass),S.G.G.S College of Commerce,91.25,92.5,92.5,93,93.5,NA,95.5,96,96.5,95.5
 Punjabi,S.G.T.B. Khalsa,50,50,50,50,55,75,75,85,95,94.5
 Political Science,Sri Venketeswara,84,85,86,88,90,91,95,94.75,96,96.5
 English,Sri Venketeswara,84,84,84,86,88,92,92,95,96.75,96.5
@@ -568,6 +582,16 @@ B.A. (P),Bharati College,NA,70,70,75,75,NA,80,80,82,83
 B.A. (P),Shaheed Bhagat Singh (E.),NA,62,60,61,65,NA,75.8,82,87,87
 B.A. (P),Vivekananda,NA,75,72,70,70,NA,82,85,88,86
 B.A. (P),Zakir Husain,NA,50,52,64,54,NA,65,Unknown,92,92
+B.Com. (Pass),Bharati College,NA,80,80,85,87,NA,90,90,91,92
+B.Com. (Pass),Shaheed Bhagat Singh (E.),NA,80,78,79,83,NA,90,91,93,91
+B.Com. (Pass),Vivekananda,NA,84,84,85,85,NA,90,90,93,94
+B.Com. (Pass),Zakir Husain,NA,86,87,90,90,NA,91,93,94,96
+B.Com. (Hons.),Acharya Narendra Dev College,NA,85,88,89,92,NA,94,94,95,95
+B.Com. (Hons.),Atma Ram Sanatan Dharma College,NA,90,90,93,93,NA,97,98,98,97.5
+B.Com. (Hons.),Bharati College,NA,82,82,88,90,NA,92,92,93,94
+B.Com. (Hons.),Shaheed Bhagat Singh (E.),NA,86,85,86,90,NA,NA,94,95,93
+B.Com. (Hons.),Vivekananda,NA,90,89,90,90,NA,92,93,95,96
+B.Com. (Hons.),Zakir Husain,NA,86,87,90,90,NA,91,95,95,96
 Economics,Zakir Husain,NA,83,85,87,87,90,92,94,95,97
 English,Bharati College,NA,75,71,67,68,75,80,90,90,94
 English,Vivekananda,NA,78,80,66,68,NA,90,95,92,92
@@ -608,6 +632,8 @@ Mathematics,Zakir Husain,NA,NA,75,78,78,88,88,95,95,96
 Biomedical Science,Bhaskaracharya College of Applied Sciences,NA,NA,NA,90,92,95,95,95,96,96
 Anthropology,Hans Raj,NA,NA,NA,80,78,96,93,93,92,93
 B.A. (P),Ramanujan,NA,NA,NA,65,67,NA,75,85,88,89
+B.Com. (Pass),Ramanujan,NA,NA,NA,78,82,NA,90,93,92,92
+B.Com. (Hons.),Ramanujan,NA,NA,NA,82,85,NA,92,96,95,95
 English,Ramanujan,NA,NA,NA,75,78,82,85,93,93,92
 Hindi,Ramanujan,NA,NA,NA,62,62,65,70,83,85,82
 Political Science,Ramanujan,NA,NA,NA,67,NA,75,85,90,91,90

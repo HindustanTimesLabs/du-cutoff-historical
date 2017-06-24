@@ -42,7 +42,9 @@
 
     <div class = "story">
     <div class="headline-container" style="height: 100vh">
-            <img src="img/cutoff-01.png" style="width: 100%">
+            <img src="img/cutoff-01.png" style="width: 100%" class="hide-mobile">
+            <img src="img/cutoff-02.png" style="width: 100%" class="hide-desktop">
+
             <h1 class="headline">10 years of Delhi University cutoffs in one chart</h1>
             <h2 class="subhed">How seeking admission in the premier university keeps getting harder</h2>
             
@@ -53,22 +55,29 @@
             <h3 class = "byline dateline">
                 June 20, 2017
             </h3>
-                <p class="playins">Click to play</p>
-
-            <div class = "play-button">
-                <i class="fa fa-play" aria-hidden="true"></i>
+            <div id="play">
+              <p class="playins">Click to play</p>
+              <div class = "play-button">
+                  <i class="fa fa-play" aria-hidden="true"></i>
+              </div>
             </div>
         </div>
+        
     <div class="sentence">
-        I want to track 
+        I want to explore 
         <select id = "course">
-            <option value="all">All courses</option>
+            <option value="all">all courses</option>
         </select>
          in 
         <select id = "college">
             
         </select>
     </div>
+        
+      <div class="ins copy" style="text-align: center; font-size: 1.1em; color: #888">
+          <b style="color: #3a3a3a">Each block</b> represents <b style="color: #3a3a3a">one course in one college
+          </b>.<br> <b style="color: #3a3a3a">Each set of blocks</b> represents the range of its <b style="color: #3a3a3a">cutoff</b>.
+        </div>
         <div class="year-text"></div>
         <div class="viz">
             <div class="labels">
@@ -88,7 +97,40 @@
                     Unknown: <span></span>
                 </p>
             </div>
+
     </div>
+    <div class="copy-container">
+    <div class="credit copy">
+      <p>If you scored less than 70% in Class 12, this year you have at least 26 options across Delhi University colleges. Only subjects offered - Hindi, Sanskrit and Urdu.</p>
+      <p>A decade ago, you had at least 120. Amidst those choices were subjects like History and Political Science as well.</p>
+      <p>As senior secondary board examinations across the country keep seeing rising scores due to moderation, Delhi University cutoffs keep increasing to accomodate the influx of high scorers. </p>
+      <p>While the Commerce courses have historically been in the 85+ bracket, the rise of Humanities has emerged only in the recent years. Today, courses like History and Political Science require as many marks as one would need for popular courses like Economics.</p>
+
+      <p>This year, over 60% of Delhi University cutoffs for the general category have crossed the 95% mark. In 2008, this figure was merely at 8%.</p>
+      <i>Data Source: Delhi University; HT Archives.</i>
+    </div>
+    </div>
+    <section class="related-stories copy">
+        <h2>Related stories</h2>
+        
+        
+
+        <a href="http://www.hindustantimes.com/static/du-cutoffs-map/"><div class="related-story">
+          <img src="http://www.hindustantimes.com/static/du-cutoffs-map/img/logo-share.png">
+          <h3>DU cutoffs college finder: Map and details</h3>
+        </div></a>
+
+        <a href="http://www.hindustantimes.com/interactives/cbse-results-2017-marks-inflation-decade/"><div class="related-story">
+          <img src="http://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/05/16/Pictures/students-during-exam-pic-patna-dube-friday_dd2bbeb8-3a39-11e7-8e2c-04c6be70fea0.jpg">
+          <h3>See how CBSE marks have shot up over the last decade</h3>
+        </div></a>
+
+        <a href="http://hindustantimes.com/interactives/"><div class="related-story">
+          <img src="http://www.hindustantimes.com/interactives/electoral-trusts-explained/img/cover-image.png">
+          <h3>More Interactives from Hindustan Times</h3>
+        </div></a>
+        
+      </section>
 </div>
 <div class="tip"></div>
 <footer class="footer-basic-centered">

@@ -16,12 +16,18 @@
   transition: all 1s linear;
   margin: 0;
   font-family: "Open Sans", sans-serif; }
+  .labels p span {
+    font-weight: bold;
+    font-style: italic; }
+  .labels p span:after {
+    content: " options"; }
 
 .year-text {
   font-size: 3em;
   font-weight: bolder;
   text-align: center;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 0.5em; }
 
 a {
   color: inherit; }
@@ -236,6 +242,7 @@ section h2 {
   line-height: 1.4em; }
 
 .related-stories.copy {
+  margin-top: 2em;
   padding-top: 30px;
   max-width: 1000px;
   border-top: 1px solid #ddd; }
@@ -333,6 +340,16 @@ section h2 {
   text-align: left;
   font-size: 0.8em;
   font-family: "Open Sans", sans-serif; }
+
+.sentence {
+  padding: 1em 1em 1.5em 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  background-color: #eee; }
+
+.sentence.track {
+  background-color: #C3FF00;
+  color: black; }
 
 .tip:before {
   z-index: 1;

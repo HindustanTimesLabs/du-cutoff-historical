@@ -7,12 +7,13 @@ var _ = require('underscore')
 var shortlist = ["B.A. (P)","B.Com. (Hons.)","B.Com. (Pass)","Biochemistry","Botany","Chemistry","Computer Science","Economics","Electronics","Food Technology","Geography","Hindi","History","Mathematics","Micro","Microbiology","Philosophy","Physical Sciences","Physics","Political Science","Psychology","Sociology","Statistics","Zoology","Sanskrit","Urdu"]
 
 var container_width = $(window).width()
-var container_height = $(window).height(); 
+var window_height = $(window).height(); 
+var container_height = (window_height<500?window_height*1.2:((window_height>550)?550:window_height))
 var margin = {top: 20, bottom: 40, left: 20, right: 20}
 
 var options = {
-      rectWidth: (container_width<800)?13:(18),
-      rectHeight: (container_width<800)?13:(18),
+      rectWidth: (container_width<800)?13:(16),
+      rectHeight: (container_width<800)?13:(16),
     };
 var endyear = 2017
 var column_numbers = (container_width<800)?(Math.floor((container_width-margin.left-margin.right)/options.rectWidth)):40
@@ -120,6 +121,8 @@ var course_mapping = {
 "Zoology Appl":"Science"
 }
 
+
+
 optionlist =  ["<70","70-80","80-90",">90","Unknown"]
 
 d3.csv('data/formatted_all_2017.csv',function(error,data){
@@ -130,7 +133,7 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
     shortlist.forEach(function(d){
         $('#course').append("<option value = '"+d+"'>"+d+"</option>")
     })
-    $('#college').append("<option value = 'all'>All Colleges</option>")
+    $('#college').append("<option value = 'all'>all colleges</option>")
     _.chain(filtered_data).pluck('college').uniq().value().sort().forEach(function(d){
         $('#college').append("<option value = '"+d+"'>"+d+"</option>")
     })
@@ -140,19 +143,21 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
         var course_val = $(this).val()
         var college_val = $('#college').val()
 
-        
+        if (course_val!="all"){
+            $('.sentence').addClass('track')
+        }
         d3.selectAll('.course')
             .transition()
             .style('fill',function(d){
                 if (college_val=='all'){
                     if (d.course == course_val){
-                        return "#FFFD50"
+                        return "#C3FF00"
                     } else {
                         return "#3a3a3a"
                     }
                 } else {
                     if (d.course == course_val&&d.college == college_val){
-                        return "#FFFD50"
+                        return "#C3FF00"
                     } else {
                         return "#3a3a3a"
                     }
@@ -160,7 +165,7 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
             })
             if (college_val=='all'){
                 var filtered_colleges = _.chain(filtered_data).where({'course':course_val}).pluck('college').uniq().value()
-                $('#college').html('<option value="all">All colleges</option>')
+                $('#college').html('<option value="all">all colleges</option>')
                 filtered_colleges.forEach(function(d){
                     $('#college').append('<option value="'+d+'">'+d+'</option>')
                 })
@@ -175,13 +180,13 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
             .style('fill',function(d){
                 if (course_val=='all'){
                     if (d.college == college_val){
-                        return "#FFFD50"
+                        return "#C3FF00"
                     } else {
                         return "#3a3a3a"
                     }
                 } else {
                     if (d.college == college_val&&d.course == course_val){
-                        return "#FFFD50"
+                        return "#C3FF00"
                     } else {
                         return "#3a3a3a"
                     }
@@ -190,7 +195,7 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
 
         if (course_val=='all'){
                 var filtered_courses = _.chain(filtered_data).where({'college':college_val}).pluck('course').uniq().value()
-                $('#course').html('<option value="all">All courses</option>')
+                $('#course').html('<option value="all">all courses</option>')
                 filtered_courses.forEach(function(d){
                     $('#course').append('<option value="'+d+'">'+d+'</option>')
                 })
@@ -200,10 +205,6 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
     var nestarray,flattened, sorted_nestarray
     var year_counter = 2008
     changeYear(2008)
-
-    var myVar = setInterval(function(){ 
-        myTimer() 
-    }, 4000);
 
     function myTimer() {
         if (year_counter==endyear){
@@ -217,6 +218,18 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
     function myStopFunction() {
         clearInterval(myVar);
     }
+
+    $('#play').on('click',function(){
+        var myVar = setInterval(function(){ 
+            myTimer() 
+        }, 4000);
+        //scroll to partcular section on the page
+        var buffer = 0
+        var pos = $('.sentence').offset();
+        console.log(pos)
+        pos.top = pos.top - buffer;
+        $('html, body').animate({scrollTop:(pos.top)}, 1200);
+    })
 
         // console.log(nestarray)
     
@@ -416,19 +429,19 @@ function tipOff(d){
                     } else {
                         if (college_val!='all' && course_val=='all'){
                             if (d.college == college_val){
-                                return "#FFFD50"
+                                return "#C3FF00"
                             } else {
                                 return "#3a3a3a"
                             }
                         } else if (course_val!='all' && college_val=='all'){
                             if (d.course == course_val){
-                                return "#FFFD50"
+                                return "#C3FF00"
                             } else {
                                 return "#3a3a3a"
                             }
                         } else {
                             if (d.course == course_val && d.college == college_val){
-                                return "#FFFD50"
+                                return "#C3FF00"
                             } else {
                                 return "#3a3a3a"
                             }

@@ -11,7 +11,7 @@ $link: #008080;
 $notification: #1D8281;
 $deadline:  #DB634F;
 $yellow: #FCCF4D;
-
+$jhatak: #C3FF00;
 *{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -31,12 +31,20 @@ $yellow: #FCCF4D;
     transition: all 1s linear;
     margin: 0;
     font-family: $block;
+    span{
+        font-weight: bold;
+        font-style: italic;
+    }
+    span:after{
+        content:" options";
+    }
 }
 .year-text{
     font-size: 3em;
     font-weight: bolder;
     text-align: center;
-    font-family: $block
+    font-family: $block;
+    margin-bottom: 0.5em;
 }
 
 
@@ -304,7 +312,7 @@ section{
 
 
 .related-stories.copy{
-
+    margin-top: 2em;
     padding-top: 30px;
     max-width: 1000px;
     border-top: 1px solid #ddd;
@@ -338,6 +346,7 @@ section{
         margin-right: 2em;
         vertical-align: top;
         text-align: left;
+
         @media(max-width: 700px){
             margin-right: auto;
             margin-bottom: 2em;
@@ -419,6 +428,17 @@ section{
   text-align: left;
   font-size: 0.8em;
   font-family: $block;
+}
+.sentence{
+    padding: 1em 1em 1.5em 1em ;
+    font-family: $block;
+    font-size: 1.2em;
+    background-color: #eee;
+
+}
+.sentence.track{
+    background-color: #C3FF00;
+    color: black;
 }
 
 .tip:before {

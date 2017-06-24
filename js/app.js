@@ -4,7 +4,7 @@ var d3 = require('d3')
 var $ = jQuery = require('jquery')
 var _ = require('underscore')
 
-var shortlist = ["B.A. (P)","B.Com. (Hons.)","B.Com. (Pass)","Biochemistry","Botany","Chemistry","Computer Science","Economics","Electronics","Food Technology","Geography","Hindi","History","Mathematics","Micro","Microbiology","Philosophy","Physical Sciences","Physics","Political Science","Psychology","Sociology","Statistics","Zoology","Sanskrit","Urdu"]
+var shortlist = ["B.A. (P)","B.Com. (Hons.)","B.Com. (Pass)","Biochemistry","Botany","Chemistry","Computer Science","Economics","Electronics","Food Technology","Geography","Hindi","History","Mathematics","Microbiology","Philosophy","Physical Sciences","Physics","Political Science","Psychology","Sociology","Statistics","Zoology","Sanskrit","Urdu"]
 
 var container_width = $(window).width()
 var window_height = $(window).height(); 

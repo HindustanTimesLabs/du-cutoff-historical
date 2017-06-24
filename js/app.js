@@ -28,13 +28,6 @@ var options = {
 var endyear = 2017
 var column_numbers = (container_width<800)?(Math.floor((container_width-margin.left-margin.right)/options.rectWidth)):40
 
-var streamColors = {
-    'Science': '#8dd3c7',
-    'Arts':'#ffffb3',
-    'Commerce':'#bebada',
-    'Vocational': '#fb8072'
-}
-
 var groupColors = {
     '<70': '#A1D700',
     '70-80':'#4F9300',
@@ -144,7 +137,7 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
         $('#course').append("<option value = '"+d+"'>"+d+"</option>")
     })
     $('#college').append("<option value = 'all'>all colleges</option>")
-    _.chain(filtered_data).pluck('college').uniq().value().sort().forEach(function(d){
+        _.chain(filtered_data).pluck('college').uniq().value().sort().forEach(function(d){
         $('#college').append("<option value = '"+d+"'>"+d+"</option>")
     })
     
@@ -155,6 +148,9 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
 
         if (course_val!="all"){
             $('.sentence').addClass('track')
+        } else {
+            $('.sentence').removeClass('track')
+
         }
         d3.selectAll('.course')
             .transition()
@@ -180,12 +176,21 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
                 }
             })
             if (college_val=='all'){
-                var filtered_colleges = _.chain(filtered_data).where({'course':course_val}).pluck('college').uniq().value()
+                if (course_val=='all'){
+                  var filtered_colleges = _.chain(filtered_data).pluck('college').uniq().value()  
+                }else {
+                    var filtered_colleges = _.chain(filtered_data).where({'course':course_val}).pluck('college').uniq().value()
+                }
+
+                
                 $('#college').html('<option value="all">all colleges</option>')
                 filtered_colleges.forEach(function(d){
                     $('#college').append('<option value="'+d+'">'+d+'</option>')
                 })
             }
+
+
+
     })
 
     $('#college').change(function(){
@@ -216,7 +221,12 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
             })
 
         if (course_val=='all'){
-                var filtered_courses = _.chain(filtered_data).where({'college':college_val}).pluck('course').uniq().value()
+            if (college_val=='all'){
+                    var filtered_courses = _.chain(filtered_data).pluck('course').uniq().value()
+                }else {
+                    var filtered_courses = _.chain(filtered_data).where({'college':college_val}).pluck('course').uniq().value()
+                }
+                
                 $('#course').html('<option value="all">all courses</option>')
                 filtered_courses.forEach(function(d){
                     $('#course').append('<option value="'+d+'">'+d+'</option>')

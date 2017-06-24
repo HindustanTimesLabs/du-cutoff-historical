@@ -436,13 +436,13 @@ document.getElementById("slider").addEventListener("change", function(){
             nestarray = d3.nest().key(function(d){
                         return getBucket(d['val'])
                     }).entries(
-                         _.map(filtered_data, function(d){
-                            return {
-                                val: d[year+'_min'],
-                                course: d.course,
-                                college: d.college
-                            }
-                    }))
+                         _.sortBy(_.map(filtered_data, function(d){
+                                                     return {
+                                                         val: parseInt(d[year+'_min'].trim()),
+                                                         course: d.course,
+                                                         college: d.college
+                                                     }
+                                             }),'val'))
 
             optionlist.forEach(function(d){
                 if (!_.contains(_.pluck(nestarray,'key'),d)){
@@ -565,7 +565,7 @@ function getSentence(dat, year_counter){
     } else {
         adj = 'has'
     }
-    if (dat[year_counter+"_min"]=="NA"){
+    if (!dat[year_counter+"_min"].match(/^[0-9]/)){
         return "The "+ year_counter +" cutoff for <b>"+dat.course+" in "+dat.college+"</b> is unknown."
     } else {
         return "<b>"+dat.course+"</b> in <b>"+dat.college+"</b> "+adj+" a <b>" + dat[year_counter+"_min"]+"%</b> cutoff in <b>"+year_counter+"</b>."

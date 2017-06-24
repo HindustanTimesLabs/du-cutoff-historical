@@ -458,8 +458,9 @@ section{
     }
 
 }
-.fa-play,.fa-pause:hover{
-    color: #aaa
+.fa-play:hover,.fa-pause:hover{
+    color: #ccc;
+    cursor: pointer;
 }
 .sentence.track{
     background-color: #C3FF00;

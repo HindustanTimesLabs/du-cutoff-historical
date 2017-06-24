@@ -146,39 +146,45 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
         var course_val = $(this).val()
         var college_val = $('#college').val()
 
-        if (course_val!="all"){
+        if (college_val!="all" || course_val!="all"){
             $('.sentence').addClass('track')
         } else {
             $('.sentence').removeClass('track')
-
         }
         d3.selectAll('.course')
             .transition()
             .style('fill',function(d){
-                if (college_val=='all'){
+                if (college_val=='all' && course_val!='all'){
                     if (d.course == course_val){
-                        if (!$('.tip').attr('style').match('none')){
-                            tipOn(d)
-                        }
                         return "#C3FF00"
                     } else {
                         return "#3a3a3a"
                     }
-                } else {
+
+                } else if (college_val!='all' && course_val=='all'){
+                    if (d.college == college_val){
+                        return "#C3FF00"
+                    } else {
+                        return "#3a3a3a"
+                    }
+
+                } else if (college_val!='all' && course_val!='all'){
                     if (d.course == course_val&&d.college == college_val){
-                        if (!$('.tip').attr('style').match('none')){
-                            tipOn(d)
-                        }
                         return "#C3FF00"
                     } else {
                         return "#3a3a3a"
                     }
+
+                } else {
+                    var obj = _.findWhere(flattened,{college: d.college, course: d.course})   
+                    return groupColors[getBucket(obj.val)]
                 }
             })
+
             if (college_val=='all'){
                 if (course_val=='all'){
                   var filtered_colleges = _.chain(filtered_data).pluck('college').uniq().value()  
-                }else {
+                }   else {
                     var filtered_colleges = _.chain(filtered_data).where({'course':course_val}).pluck('college').uniq().value()
                 }
 
@@ -188,35 +194,43 @@ d3.csv('data/formatted_all_2017.csv',function(error,data){
                     $('#college').append('<option value="'+d+'">'+d+'</option>')
                 })
             }
-
-
-
     })
 
     $('#college').change(function(){
         var college_val = $(this).val()
         var course_val = $('#course').val()
+        if (college_val!="all" || course_val!="all"){
+            $('.sentence').addClass('track')
+        } else {
+            $('.sentence').removeClass('track')
+        }
         d3.selectAll('.course')
             .transition()
             .style('fill',function(d){
-                if (course_val=='all'){
+                if (college_val=='all' && course_val!='all'){
+                    if (d.course == course_val){
+                        return "#C3FF00"
+                    } else {
+                        return "#3a3a3a"
+                    }
+
+                } else if (college_val!='all' && course_val=='all'){
                     if (d.college == college_val){
-                        if (!$('.tip').attr('style').match('none')){
-                            tipOn(d)
-                        }
                         return "#C3FF00"
                     } else {
                         return "#3a3a3a"
                     }
+
+                } else if (college_val!='all' && course_val!='all'){
+                    if (d.course == course_val&&d.college == college_val){
+                        return "#C3FF00"
+                    } else {
+                        return "#3a3a3a"
+                    }
+
                 } else {
-                    if (d.college == college_val&&d.course == course_val){
-                        if (!$('.tip').attr('style').match('none')){
-                            tipOn(d)
-                        }
-                        return "#C3FF00"
-                    } else {
-                        return "#3a3a3a"
-                    }
+                    var obj = _.findWhere(flattened,{college: d.college, course: d.course})   
+                    return groupColors[getBucket(obj.val)]
                 }
             })
 

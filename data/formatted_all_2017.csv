@@ -20,7 +20,7 @@ Physics,Ramjas,82,88,84,88,96,96,96.5,96.66,97.66,96.66
 Electronics,Shaheed Rajguru College of Applied Sciences for Women,83,77,85,80,80,94,94,93,94,90
 Physics,S.G.T.B. Khalsa,80,81,82.67,NA,92,94,94.66,96,98.33,98
 Physics,Shivaji,73,65,70,75,82,88,90,95,96,96
-Physics,Sri Venketeswara,87,86,88,93.33,93.33,96,96,96.67,97,96.33
+Physics,Sri Venkateswara,87,86,88,93.33,93.33,96,96,96.67,97,96.33
 Physics,Swami Shardhanand,77,78,80,80,80,NA,95,91,92,92
 Chemistry,Acharya Narendra Dev College,72,70,73,75,78,85,92,94,97,95
 Chemistry,Atma Ram Sanatan Dharma College,73,70,72,76,79,90,96,96,97.5,94
@@ -41,7 +41,7 @@ Chemistry,Ramjas,81,82,82,83,93.5,96,95,96,98,96
 Instrumentation,Shaheed Rajguru College of Applied Sciences for Women,80,75,70,75,75,NA,91,91,94,89
 Chemistry,S.G.T.B. Khalsa,78,76,81,NA,90,95,93.66,96,98.33,98
 Chemistry,Shivaji,68,60,65,70,80,88,89,93,95,95
-Chemistry,Sri Venketeswara,80,74,NA,89,92,95.67,96,96,96,95.33
+Chemistry,Sri Venkateswara,80,74,NA,89,92,95.67,96,96,96,95.33
 Botany,Acharya Narendra Dev College,68,65,68,65,72,74,85,87,96,88
 Food Technology,Bhaskaracharya College of Applied Sciences,83,80,78,80,86,95,95,95,96,95
 Botany,Daulat Ram,75,73,74,80,79,83,90,91,93,92
@@ -57,7 +57,7 @@ Botany,Ramjas,75,76,76,78,81,86,90,91,93,93
 Food Technology,Shaheed Rajguru College of Applied Sciences for Women,85,80,80,80,80,96,94,93,94,93
 Botany,S.G.T.B. Khalsa,70,70,71,72,75,91,87,92.67,94.66,96.33
 Botany,Shivaji,70,63,64,68,73,78,86,91,93,93
-Botany,Sri Venketeswara,79,76,77,80,81,88,89,90,92,93
+Botany,Sri Venkateswara,79,76,77,80,81,88,89,90,92,93
 Botany,Swami Shardhanand,70,65,70,68,70,NA,90,88,88,92
 Zoology,Acharya Narendra Dev College,70,67,71,68,75,80,90,90,90,91
 Zoology,Daulat Ram,78.33,75,76,81,81,83,96.5,93,93.66,93
@@ -74,15 +74,15 @@ English,P.G.D.A.V.,86,84,84,82,85,88,87,91,94,95
 Zoology,Ramjas,78,79,78,81,88,88,90,92,93.66,96
 Zoology,S.G.T.B. Khalsa,70,71,72,NA,78,90,89,94,95.66,97
 Zoology,Shivaji,71,75,65,68,73,80,88,93,94,95
-Zoology,Sri Venketeswara,81,90,82,85,86.33,92,94,94,95,95.33
-Zoology,Swami Shardhanand,70,NA,70,70,NA,NA,90,88,88,90
+Zoology,Sri Venkateswara,81,90,82,85,86.33,92,94,94,95,95.33
+Zoology,Swami Shardhanand,70,70,70,70,NA,NA,90,88,88,90
 B.Com. (Pass),Atma Ram Sanatan Dharma College,88,87,87,90,90,NA,95,97,97,96
 Biochemistry,Daulat Ram,89,83,88,89,85,89,94,92,95,95
 Biochemistry,Deshbandhu,80,82,77,80,76,78,83,83,89,96
 Biochemistry,Institute of Home Economics,89,75,72,72,72,85,90,90,92,92
 Hindi,P.G.D.A.V.,62,65,65,63,67,68,70,73,77,80
-Biochemistry,Shivaji,81,NA,75,72,82,89,90,94,96,96
-Biochemistry,Sri Venketeswara,92,87,92,94,94,96,96,96,97,96.75
+Biochemistry,Shivaji,81,75,75,72,82,89,90,94,96,96
+Biochemistry,Sri Venkateswara,92,87,92,94,94,96,96,96,97,96.75
 Microbiology,Gargi,90,89.66,88,88,89,91,90.33,94.6,95.66,95.3
 Microbiology,Institute of Home Economics,90,84,NA,84,84,87,92,92,92,92
 Mathematics,P.G.D.A.V.,78,78,78,80,72,85,90,93,95,94
@@ -98,8 +98,8 @@ Electronics,Maharaja Agrasen,75,78,78,80,80,90,94,94,95,92
 Economics,S.G.G.S College of Commerce,92.25,93.5,93.5,94.5,94.75,95.5,96.5,97,97.5,96.5
 Electronics,Rajdhani,77,75,74,77,83,97,90,90,91,91
 Electronics,S.G.T.B. Khalsa,86,87,87,NA,93.5,97,97.66,96.33,99,99.66
-Electronics,Sri Aurobindo,76,NA,75,77,75,NA,90,90,90,93
-Electronics,Sri Venketeswara,88,NA,89,92,92,NA,96.67,96.67,96.67,96
+Electronics,Sri Aurobindo,76,74,75,77,75,NA,90,90,90,93
+Electronics,Sri Venkateswara,88,87,89,92,92,NA,96.67,96.67,96.67,96
 Computer Science,Acharya Narendra Dev College,83,78,81,83,86,94,95,95,94,96
 Computer Science,Atma Ram Sanatan Dharma College,85,86,86,94,90,92,98,99,97,97
 Computer Science,Bhaskaracharya College of Applied Sciences,88,87,85,88,89,97,98.5,97,97.25,95.25
@@ -132,8 +132,8 @@ Mathematics,Motilal Nehru,78,70,70,85,90,91,93,95,97,96
 Mathematics,Rajdhani,71,70,70,73,73,88,88,92,95,93
 Mathematics,Ramjas,89,85,88,90,93,93,96,97,98.5,97
 Mathematics,S.G.T.B. Khalsa,87,88,90,88,90,94.5,96.25,96,98,97.5
-Mathematics,Shivaji,65,NA,70,78,85,85,87,97,97,97
-Mathematics,Sri Venketeswara,90,NA,85,87,87,96,91,97,97,97
+Mathematics,Shivaji,65,74,70,78,85,85,87,97,97,97
+Mathematics,Sri Venkateswara,90,82,85,87,87,96,91,97,97,97
 Statistics,Hindu,92.5,91.5,93,94,95,95.5,96,97.75,98,96.75
 Home Science (H),Institute of Home Economics,75,65,NA,60,65,80,85,85,83,NA
 B.Com. (Pass),Kalindi,85,85,85,85,87,NA,90,92,94,93
@@ -143,7 +143,7 @@ Statistics,Lady Shri Ram College for Women,92,92,91.5,94.5,95,96,97,97.25,97.25,
 Statistics,P.G.D.A.V.,81,83,83,80,85,88,91,94,95,96
 Statistics,Ram Lal Anand,80,80,NA,84,80,85,92,94,95,95
 Statistics,Ramjas,87,85,88,88,92,93,94,97.5,98.5,97
-Statistics,Sri Venketeswara,90,NA,87,88,90,96,93,97,97,96.75
+Statistics,Sri Venkateswara,90,87,87,88,90,96,93,97,97,96.75
 Physical Sciences,Dyal Singh,65,65,62,65,70,NA,90,90,90,90
 Physical Sciences,Deshbandhu,65,62,60,65,70,NA,80,88,88,89
 Physical Sciences,Gargi,66,65,65.33,67,71,NA,88,89,90,89
@@ -174,12 +174,12 @@ Life Science,Ramjas,74,76,75,72,77,NA,85,86,88,92
 Life Science,S.G.T.B. Khalsa,68,68,68,70,74,NA,76,90,94,95.33
 Life Science,Shivaji,67,58,60,64,69,NA,NA,86,86,91
 Life Science,Sri Aurobindo,62,65,66,66,66,NA,85,83,82,84
-Life Science,Sri Venketeswara,76,73,74,77,79,NA,86,87,88,90
+Life Science,Sri Venkateswara,76,73,74,77,79,NA,86,87,88,90
 Life Science,Swami Shardhanand,68,64,65,65,68,NA,90,85,87,92
 English,Atma Ram Sanatan Dharma College,83,82,82,84,84,90,93,95,96,96
 B.Com. (Hons.),P.G.D.A.V.,88,91,91,90,92,NA,NA,95,96.5,96.5
 B.Sc. Applied Physical Sciences with Industrial Chemistry,Rajdhani,72,66,60,65,68,NA,NA,NA,NA,87
-Biological Science,Sri Venketeswara,87,NA,81,83,85,NA,92,92,96,95
+Biological Science,Sri Venkateswara,87,NA,81,83,85,NA,92,92,96,95
 B.A. (P),Atma Ram Sanatan Dharma College,78,78,77,76,77,NA,85,91,93,91
 B.A. (Voc. Studies) Management and Marketing of Insurance (MMI),College of Vocational Studies,82,81,81,80,81,NA,NA,NA,NA,89
 Political Science,Deshbandhu,70,70,70,72,80,70,80,89,89,90
@@ -188,8 +188,8 @@ B.A. (P),Kalindi,63,63,63,65,70,NA,77,83,80,84
 English,Kalindi,80,75,75,85,85,88,90,91,93,92
 Mathematical Science,P.G.D.A.V.,70,70,70,73,72,NA,82,90,92,90
 Political Science,P.G.D.A.V.,72,75,75,76,82,80,85,86,90,92
-Sanskrit,Sri Venketeswara,50,50,50,55,55,56,56,58,60,60
-B.A. (P),Sri Venketeswara,83,85,86,86,87,NA,90,93,94,95.25
+Sanskrit,Sri Venkateswara,50,50,50,55,55,56,56,58,60,60
+B.A. (P),Sri Venkateswara,83,85,86,86,87,NA,90,93,94,95.25
 B.A. (P),Aditi Mahavidyalaya,70,68,65,68,66,NA,70,72,77,77
 B.A. (P),Bhagini Nivedita,70,72,60,65,65,NA,68,70,72,75
 B.A. (P),Bhim Rao Ambedkar,83,78,78,78,91,NA,92,90,90,90
@@ -221,7 +221,7 @@ B.A. (P),Shivaji,67,66,66,68,71,NA,78,86,88,88
 B.A. (P),Satyawati Co-Ed.,70,66,72,72,75,NA,78,85,92,92
 B.A. (P),Satyawati (E.),64,64,62,65,62,NA,72,72,85,85
 B.A. (P),Shaheed Bhagat Singh,75,74,75,75,76,NA,80,85,90,90
-Sociology,Sri Venketeswara,87,84,84,87,90,91,92,92,95,96
+Sociology,Sri Venkateswara,87,84,84,87,90,91,92,92,95,96
 B.A. (P),S.G.T.B. Khalsa,74,80,78.5,80,88,NA,91,94,97.25,97
 B.A. (P),S.G.N.D. Khalsa,78,87,87,80,81,NA,90,89,94,96
 B.A. (P),Shyama Prasad Mukherji College,70,70,70,70,70,NA,80,78,78,78
@@ -434,7 +434,7 @@ Hindi,Shyam Lal (E.),56,58,56,64,65,65,75,82,82,84
 Hindi,Sri Aurobindo,55,55,56,62,65,80,75,73,74,76
 Hindi,Sri Aurobindo (E.),53,50,50,53,55,58,75,76,77,78
 Hindi,Swami Shardhanand,70,65,65,65,65,NA,85,85,80,80
-Urdu,Zakir Husain,All eligible,NA,61,61,61,67,65,67,70,71
+Urdu,Zakir Husain,All eligible,60,61,61,61,67,65,67,70,71
 Hindi,Zakir Husain (E.),60,60,65,65,65,75,75,75,79,79
 Mathematics,Janki Devi Memorial,60,78,83,85,82,85,88,95,93,93
 Mathematics,Jesus & Mary,85,88.75,87.75,88.75,87,NA,NA,NA,93,NA
@@ -448,7 +448,7 @@ Mathematics,Satyawati Co-Ed.,80,75,75,77,78,85,92,94,96,96
 Mathematics,Shaheed Bhagat Singh,77,77,78,79,NA,88,90,94,95,94
 Economics,Shri Ram College of Commerce,92.75,93.5,93.75,95.25,96.75,97.5,97.25,98.25,98.25,97.75
 Mathematics,Shyama Prasad Mukherji College,75,80,80,78,78,85,90,87,89,89
-Urdu,Zakir Husain (E.),50,NA,55,NA,60,60,60,60,65,63
+Urdu,Zakir Husain (E.),50,50,55,NA,60,60,60,60,65,63
 Philosophy,Daulat Ram,70,72,75,80,78,86,88,86,86.5,90
 Philosophy,Gargi,70,67,70,74,80,83,84,85,86.5,86.5
 Philosophy,Hindu,74,85,NA,88,88.5,88,93.5,95,95,93
@@ -527,8 +527,8 @@ Sociology,Kamala Nehru,75,75,75,82,84,85,88,93,93,93
 Sociology,Lady Shri Ram College for Women,92.25,91.5,91.5,94,93.5,96.5,96,97,96.5,96.25
 Sociology,Maitreyi,74,75,76,76,80,82,82,90,91,94
 Sociology,Miranda House,85.75,86,88.5,89.5,90.5,94,95.5,95.5,95.75,96
-History,Sri Venketeswara,80,82,82,85,86,88,92,92,96,96
-B.Com. (Pass),Sri Venketeswara,92,92.5,94,96,96,NA,96.25,96.5,96.75,96.5
+History,Sri Venkateswara,80,82,82,85,86,88,92,92,96,96
+B.Com. (Pass),Sri Venkateswara,92,92.5,94,96,96,NA,96.25,96.5,96.75,96.5
 Mathematics,Atma Ram Sanatan Dharma College,85,78,74,78,80,90,96,96,97,96
 Applied Psychology,Bhim Rao Ambedkar,89,80,80,80,91,NA,NA,92,92,91
 B.A. (Voc. Studies) Marketing Management and Retail Business (MMRB),College of Vocational Studies,83,82,82,81,83,NA,NA,NA,NA,91
@@ -543,8 +543,8 @@ Psychology,Lady Shri Ram College for Women,94,95,94.75,96,96,96.75,97.25,98,98.5
 Psychology,Mata Sundri,81,75,80,82,85,NA,90,93,94,95
 Urdu,Satyawati Co-Ed.,50,45,45,45,45,45,48,52,53,55
 Applied Psychology,Shyama Prasad Mukherji College,78,78.5,79.5,79.5,NA,NA,NA,89,92,92.5
-Hindi,Sri Venketeswara,68,68,70,72,72,75,72,77,84,83
-B.Com. (Hons.),Sri Venketeswara,94.5,94.5,95,97,97,NA,97.25,97.5,97.75,97.5
+Hindi,Sri Venkateswara,68,68,70,72,72,75,72,77,84,83
+B.Com. (Hons.),Sri Venkateswara,94.5,94.5,95,97,97,NA,97.25,97.5,97.75,97.5
 Geography,Aditi Mahavidyalaya,70,70,75,70,70,80,82,80,84,84
 Geography,Bhim Rao Ambedkar,80,77,77,78,91,85,92,92,92,91
 B.A. (Voc. Studies) Small and Medium Enterprises (SME),College of Vocational Studies,77,76,76,75,76,NA,NA,NA,NA,86
@@ -556,7 +556,7 @@ Geography,Miranda House,84,85,87,87,90,96.5,96,95.5,97,97
 Sanskrit,P.G.D.A.V.,55,55,55,50,57,47,60,60,65,67
 Geography,Shivaji,72,68,70,75,80,82,85,93,93.5,93.5
 Geography,Shaheed Bhagat Singh,75,74,75,76,76,80,84,88,95,93
-Economics,Sri Venketeswara,94,92,91.75,95,96.25,96.5,96.5,97,97.5,97.5
+Economics,Sri Venkateswara,94,92,91.75,95,96.25,96.5,96.5,97,97.5,97.5
 Geography,Swami Shardhanand,75,80,65,65,72,NA,85,85,85,88
 History,Atma Ram Sanatan Dharma College,65,63,64,67,67,72,83,90,91,92
 History,Deshbandhu,60,60,60,63,65,65,80,88,88,90
@@ -568,8 +568,8 @@ Journalism,Lady Shri Ram College for Women,75+Test,NA,77,NA,NA,97.5,96,98.5,97.5
 Punjabi,Mata Sundri,60,NA,45,NA,47,45,50,55,55,60
 B.Com. (Pass),S.G.G.S College of Commerce,91.25,92.5,92.5,93,93.5,NA,95.5,96,96.5,95.5
 Punjabi,S.G.T.B. Khalsa,50,50,50,50,55,75,75,85,95,94.5
-Political Science,Sri Venketeswara,84,85,86,88,90,91,95,94.75,96,96.5
-English,Sri Venketeswara,84,84,84,86,88,92,92,95,96.75,96.5
+Political Science,Sri Venkateswara,84,85,86,88,90,91,95,94.75,96,96.5
+English,Sri Venkateswara,84,84,84,86,88,92,92,95,96.75,96.5
 Chemistry,Zakir Husain,NA,70,70,75,80,90,91,94,93,94
 Botany,Miranda House,NA,75,77,80,85,91,91,96,96,96
 Botany,Zakir Husain,NA,70,70,72,70,76,78,81,90,90
@@ -578,13 +578,13 @@ Physical Sciences,Zakir Husain,NA,68,NA,72,70,NA,77,80,91,91
 Life Science,Kalindi,NA,68,66,72,75,NA,80,82,82,89
 Life Science,Miranda House,NA,75,77,80,83,NA,90,NA,95,95.33
 Life Science,Zakir Husain,NA,68,68,72,70,NA,77,80,90,90
-B.A. (P),Bharati College,NA,70,70,75,75,NA,80,80,82,83
+B.A. (P),Bharati College,72,70,70,75,75,NA,80,80,82,83
 B.A. (P),Shaheed Bhagat Singh (E.),62,62,60,61,65,NA,75.8,82,87,87
 B.A. (P),Vivekananda,86.25,75,72,70,70,NA,82,85,88,86
 B.A. (P),Zakir Husain,NA,50,52,64,54,NA,65,Unknown,92,92
-B.Com. (Pass),Bharati College,NA,80,80,85,87,NA,90,90,91,92
+B.Com. (Pass),Bharati College,80,80,80,85,87,NA,90,90,91,92
 B.Com. (Pass),Shaheed Bhagat Singh (E.),NA,80,78,79,83,NA,90,91,93,91
-B.Com. (Pass),Vivekananda,NA,84,84,85,85,NA,90,90,93,94
+B.Com. (Pass),Vivekananda,89,84,84,85,85,NA,90,90,93,94
 B.Com. (Pass),Zakir Husain,NA,86,87,90,90,NA,91,93,94,96
 B.Com. (Hons.),Acharya Narendra Dev College,NA,85,88,89,92,NA,94,94,95,95
 B.Com. (Hons.),Atma Ram Sanatan Dharma College,90,90,90,93,93,NA,97,98,98,97.5
@@ -601,23 +601,23 @@ History,P.G.D.A.V.,68,67,67,65,70,75,80,85,88,90
 History,Vivekananda,80,70,70,70,70,NA,73,80,80,85
 History,Zakir Husain,NA,71,72,74,75,80,82,85,90,90
 Hindi,Atma Ram Sanatan Dharma College,65,65,65,65,66,80,75,78,80,80
-Hindi,Bharati College,NA,65,65,65,65,70,70,70,72,75
-Hindi,Vivekananda,NA,75,70,70,65,NA,75,80,82,81
+Hindi,Bharati College,65,65,65,65,65,70,70,70,72,75
+Hindi,Vivekananda,80,75,70,70,65,NA,75,80,82,81
 Hindi,Zakir Husain,NA,63,64,65,65,75,76,78,78,78
 Philosophy,Zakir Husain,NA,60,61,63,65,82,84,86,90,92
 Political Science,Bharati College,70,70,70,73,73,73,82,85,86,87
 Political Science,Dyal Singh (E.),NA,61,62,62,65,70,80,88,89,90
-Political Science,Shaheed Bhagat Singh (E.),NA,60,60,62,67,70,81,87,91,89
-Political Science,Vivekananda,NA,77,70,70,70,NA,87,88,90,90
+Political Science,Shaheed Bhagat Singh (E.),64,60,60,62,67,70,81,87,91,89
+Political Science,Vivekananda,87,77,70,70,70,NA,87,88,90,90
 Political Science,Zakir Husain,NA,72,73,76,77,83,85,88,91,92
-Sanskrit,Bharati College,NA,45,45,50,50,50,55,60,60,60
-Sanskrit,Vivekananda,NA,60,60,60,55,NA,55,60,55,50
+Sanskrit,Bharati College,45,45,45,50,50,50,55,60,60,60
+Sanskrit,Vivekananda,62,60,60,60,55,NA,55,60,55,50
 Sanskrit,Zakir Husain,NA,50,51,55,55,65,65,66,66,66
 Sanskrit,Zakir Husain (E.),NA,55,60,50,50,60,55,60,60,60
 Psychology,I.P. College,NA,91.25,92.75,92,95,95.5,98,97,97,97.5
 Applied Psychology,Vivekananda,NA,82,77,75,74,NA,NA,93,95,93.5
 Psychology,Zakir Husain,NA,80,81,83,83,NA,92,93,94,96
-Geography,Shaheed Bhagat Singh (E.),NA,68,66,68,NA,75,80,85,89,89
+Geography,Shaheed Bhagat Singh (E.),72,68,66,68,NA,75,80,85,89,89
 Physical Sciences,Bhagini Nivedita,NA,NA,60,60,63,NA,76,78,78,NA
 B.Sc. Physical Sciences with Electronics,Atma Ram Sanatan Dharma College,NA,NA,68,70,72,NA,94,94,NA,93
 Zoology,Dyal Singh,NA,NA,71,70,71,81,86,88,91,92
@@ -625,8 +625,8 @@ Chemistry,Deen Dayal Upadhyaya,NA,NA,70,80,88,94,94,96,96,96
 Botany,Deen Dayal Upadhyaya,NA,NA,67,76,80,88,88,90,90,92
 Zoology,Deen Dayal Upadhyaya,NA,NA,67,76,80,90,90,92,92,94
 Biomedical Science,Shaheed Rajguru College of Applied Sciences for Women,NA,NA,84.33,85,85,94,94,NA,95,94
-Mathematics,Vivekananda,85,NA,75,80,NA,NA,88,90,95,95
-Zoology,Zakir Husain,NA,NA,70,75,73,78,79,83,91,92
+Mathematics,Vivekananda,85,80,75,80,NA,NA,88,90,95,95
+Zoology,Zakir Husain,NA,70,70,75,73,78,79,83,91,92
 Electronics,Zakir Husain,NA,NA,83,88,86,NA,94,95,93,94
 Mathematics,Zakir Husain,NA,NA,75,78,78,88,88,95,95,96
 Biomedical Science,Bhaskaracharya College of Applied Sciences,NA,NA,NA,90,92,95,95,95,96,96
